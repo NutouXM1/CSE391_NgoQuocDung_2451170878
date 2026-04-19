@@ -9,3 +9,4 @@ Phần B:
         dòng 27-36 - table không chia head body foot - chia thead gồm <td> tên và <td> giá; tbody gồm <td> iphone 16 pro và <td> 25.990.000.
         dòng 45 - không đóng thẻ p - thêm </p>.
         dòng 2-hết -  không đóng thẻ html - thêm </html>.
+        dòng 41 - không đúng semantic - thay thẻ p bằng <aside>
