@@ -46,3 +46,49 @@ Phần A:
 Phần B:
     C1:
         -HTML5 không thể kiểm tra trùng khớp password bằng pattern vì pattern chỉ kiểm tra nội dung input không so sánh với giá trị khác.
+Phần C:
+    C1:
+        -Dòng 1 thiếu thuộc tính action và method của form, vi phạm validation
+        sửa: <form action="#" method="post">
+             ...
+             </form>
+        -Dòng 2 trường nhập tên thiếu label, vi phạm accessibility
+        sửa: <label for="name">Tên</label>
+             <input type="text" id="name">
+        -Dòng 4 trường nhập email thiếu label, vi phạm accessibility
+        sửa: <label for="email">Email</label>
+             <input type="email" id="email" placeholder="email của bạn">
+        -Dòng 6 trường nhập password thiếu label, vi phạm accessibility
+        sửa: <label for="password">Mật khẩu</label>
+             <input type="password" id="password" placeholder="Mật khẩu">
+        -Dòng 7 trường nhập lại password thiếu label, vi phạm accessibility
+        sửa: <label for="re_password">Nhập lại</label>
+             <input type="password" id="re_password" placeholder="Nhập lại mật khẩu">
+        -Dòng 9 trường nhập sđt thiếu label, nhận sai kiểu dữ liệu, có dữ liệu tĩnh được cho sẵn, vi phạm validation và accessibility.
+        sửa: <label for="phone_number">Số điện thoại</label>
+             <input type="tel" pattern="[0-9]{10}" placeholder="0901234567">
+        -Dòng 11-14 chưa có label cho hộp chọn, thiếu placeholder, vi phạm accessibility và best practices
+        sửa: <label for="city">Thành phố:</label>
+             <select id="city" name="city" required>
+                <option value="">--Chọn thành phố--</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="hcm">TP.HCM</option>
+             </select>
+        -Dòng 16-18 chưa có input cho người dùng đồng ý, vi phạm validation
+        sửa: <input type="checkbox" id="agreement" required>
+             <label for="agreement">Tôi đồng ý điều khoản</label>
+    C2:
+        -Regex cho CMND/CCCD và Số tài khoản
+            +CMND/CCCD: Phải đúng 12 chữ số → pattern="^\d{12}$"
+            +Số tài khoản: Từ 10 đến 15 chữ số → pattern="^\d{10,15}$"
+        -HTML5 validation có an toàn không với ngân hàng?
+            +HTML5 validation chưa đủ an toàn cho ngân hàng
+            +Bởi HTML5 validation chỉ hoạt động ở trình duyệt phía khách hàng (frontend), người dùng có thể disable hoặc chỉnh sửa bằng DevTools.
+            +Ngân hàng phải verify lại dữ liệu trên server (backend).
+        -3 việc HTML5 validation không thể thực hiện
+            +Validate dữ liệu có xuất hiện trong hệ thống (như check xem số tài khoản đó đã được đăng ký hay chưa)
+            +Validate logic phức tạp (chẳng hạn như mật khẩu phải chứa ít nhất 1 chữ in hoa, 1 ký tự đặc biệt)
+            +Validate comparison between 2 fields (ví dụ “Nhập lại mật khẩu” phải giống mật khẩu).
+        -Two security risks khi chỉ validate frontend
+            +Người dùng có thể bypass HTML5 validation thông qua việc disable JavaScript hoặc chỉnh sửa HTML.
+            +Hackers cũng có thể bypass HTML5 validation bằng cách gửi các dữ liệu
