@@ -42,3 +42,28 @@ Phần A:
                 font-size: 20px;
             }
     C2:
+        -Các selector:
+            +h1: Chọn thẻ h1; nội dung: ShopTLU
+            +.price: chọn tất cả thẻ thuộc class price; nội dung:
+                     25.990.000
+                     45.990.000
+            +#app header: chọn thẻ header trong app; nội dung:
+                    ShopTLU
+                    Home
+                    Products
+                    About
+            +nav a:first-child: chọn thẻ a đầu tiên trong nav; nội dung:
+                    Home
+            +.product.featured h2: chọn thẻ h2 trong thẻ thuộc class featured; nội dung:
+                    
+            +article > p: chọn thẻ p là con trực tiếp của article; nội dung:
+                    25.990.000
+                    Mô tả sản phẩm....
+                    45.990.000
+                    Mô tả sản phẩm....
+            +a[href="/"]: chọn thẻ a có thuộc tính href="/"; nội dung:
+                    Home
+            +.top-bar.dark h1: chọn thẻ h1 trong các thẻ thuộc class dark; nội dung:
+
+
+    C3:
