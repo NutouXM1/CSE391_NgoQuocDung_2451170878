@@ -67,3 +67,28 @@ Phần A:
 
 
     C3:
+        -Trường hợp 1:
+            +chiều rộng hiển thị: 400+20*2+5*2 = 450px
+            +không gian chiếm trên trang: 400+20*2+5*2+10*4 = 490px
+        -Trường hợp 2:
+            +chiều rộng hiển thị: 400px
+            +kích thước content thực tế: 400-20*2-5*2 = 350px
+            +không gian chiếm trên trang: 400+10*4 = 440
+        -Trường hợp 3:
+            +khoảng cách giữa box-a và box-b: 40px
+            +không phải 65px do margin dọc chỉ lấy giá trị lớn nhất mà không cộng tổng giá trị khi margin chồng lên nhau.
+    C4:
+        -A: 0 0 1
+        -B: 0 1 0
+        -C: 1 0 0
+        -D: 0 1 1
+        -element có màu đỏ vì id có giá trị ưu tiên cao.
+        -thêm lệnh <p class="price" id="main-price" style="color: orange;"> element có màu cam.
+        -nếu thêm !important element có màu đen do !important có ưu tiên cao nhất.
+Phần C:
+    C1:
+        -chiều rộn thực tế:
+            +sidebar: 300+20*2+1*2=342px
+            +content: 660+30*2+1*2=722px
+        -layout vỡ do chiều rộng sidebar và content cộng lại vượt quá chiều rộng container chứa cả 2.
+    C2:
