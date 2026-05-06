@@ -1,0 +1,40 @@
+* {
+    color: black;
+}
+/* specificity 0;0;0 */
+p {
+    color: red;
+}
+/* specificity 0;0;1 */
+.text {
+    color: blue;
+}
+/* specificity 0;1;0 */
+.highlight {
+    color: green;
+}
+/* specificity 0;1;0 */
+p.text {
+    color: brown;
+}
+/* specificity 0;1;1 */
+#demo {
+    color: purple;
+}
+/* specificity 1;0;0 */
+p#demo {
+    color: cyan;
+}
+/* specificity 1;0;1 */
+#main .text {
+    color: orange;
+}
+/* specificity 1;1;0 */
+#demo.text {
+    color: pink;
+}
+/* specificity 1;1;0 */
+#main #demo {
+    color: yellow;
+}
+/* specificity 2;0;0 */

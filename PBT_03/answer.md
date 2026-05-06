@@ -89,7 +89,19 @@ Phần B:
     C2:
         -box 1: chiều rộng thực tế 350px
         -box 2: chiều rộng thực tế 300px
-        
+    C3:
+        * { color: black;}           /* specificity 0;0;0 */
+        p {color: red;}              /* specificity 0;0;1 */
+        .text {color: blue;}         /* specificity 0;1;0 */
+        .highlight {color: green;}   /* specificity 0;1;0 */
+        p.text {color: brown;}       /* specificity 0;1;1 */
+        #main #demo {color: yellow;} /* specificity 1;0;0 */
+        #demo {color: purple;}       /* specificity 1;0;0 */
+        p#demo {color: cyan;}        /* specificity 1;0;1 */
+        #main .text {color: orange;} /* specificity 1;1;0 */
+        #demo.text {color: pink;}    /* specificity 1;1;0 */
+        -element cuối cùng hiển thị màu hồng do rule #demo.text có specificity cao nhất và nằm ở cuối file.
+        -thay đổi thứ tự rule có thể thay đổi kết quả hiện thị do có 2 rule cùng specificity.
 Phần C:
     C1:
         -chiều rộn thực tế:
