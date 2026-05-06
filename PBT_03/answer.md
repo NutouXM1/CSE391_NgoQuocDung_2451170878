@@ -85,6 +85,11 @@ Phần A:
         -element có màu đỏ vì id có giá trị ưu tiên cao.
         -thêm lệnh <p class="price" id="main-price" style="color: orange;"> element có màu cam.
         -nếu thêm !important element có màu đen do !important có ưu tiên cao nhất.
+Phần B:
+    C2:
+        -box 1: chiều rộng thực tế 350px
+        -box 2: chiều rộng thực tế 300px
+        
 Phần C:
     C1:
         -chiều rộn thực tế:
