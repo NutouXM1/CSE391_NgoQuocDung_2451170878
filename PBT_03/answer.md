@@ -109,3 +109,7 @@ Phần C:
             +content: 660+30*2+1*2=722px
         -layout vỡ do chiều rộng sidebar và content cộng lại vượt quá chiều rộng container chứa cả 2.
     C2:
+        -"sản phẩm A" font size 20px color green
+        -"mô tả sản phẩm" color #333
+        -"sản phẩm B" fontsize 20px color #333
+        -"mô tả sản phẩm B" color green
