@@ -25,3 +25,17 @@ sticky      có chiếm chỗ trong flow         tham chiếu chính nó        
         [ item1 ][ item2 ][ item3 ]
         [ item4 ][ item5 ][ item6 ]
         [ item7 ]
+Phần C:
+    C1:
+    -Nav bar: sử dụng flexbox vì cần chia khoảng cách giữa các phần tử.
+    -Lưới ảnh insta: sử dụng grid vì cần chia bố cục rõ ràng.
+    -blog(main content+sidebar): sử dụng grid vì cần chia bố cục
+    -footer(4 cột): sử dụng grid vì cần chia bố cục nhiều cột.
+    -card sản phẩm (ảnh, text, nút): sử dụng flexbox vì không cần chia cột cho từng nội dung.
+    C2:
+    -Lỗi 1: cards không đều chiều cao
+        +nguyên nhân: card không dùng flexbox.
+    -Lỗi 2: item dính góc trái trên
+        +nguyên nhân: chưa sử dụng justify-content và align-items
+    -Lỗi 3: sidebar bị co
+        +nguyên nhân: flex cho phép co giãn mặc định.
