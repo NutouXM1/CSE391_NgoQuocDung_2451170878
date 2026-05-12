@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: blue;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    grid-column: 1 / -1;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.header img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.header nav{
+    display: flex;
+    align-items: center;
+}
+.header nav ul{
+    list-style: none;
+    display: flex;
+}
+.header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0px 15px;
+    display: flex;
+}
+.header .login{
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+}
+.header nav ul li a:hover{
+    background-color: white;
+    color: blue;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+main{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 20px;
+    margin-top: 80px;
+}
+.hero{
+    grid-column: 1 / -1;
+    background-color: lightgray;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    grid-column: 1 / -1;
+    background-color: lightgray;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+.sidebar label {
+  display: block;
+  margin: 5px 0;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.products_card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.products_card img {
+  width: 200px;
+  height: 200px;
+}
+.products_card button {
+  margin-top: auto;
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.products_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.ads {
+  background-color: #fafafa;
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.ads img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
