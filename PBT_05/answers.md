@@ -64,3 +64,18 @@ Phần A:
             @import 'variables';
             @import 'mixins';
 Phần C:
+    C1:
+        -nav:
+            +điện thoại: toàn bộ chức năng chuyển về nút hamburger.
+            +tablet: sử dụng cả sidebar và hamburger
+            +pc: thanh nav đầy đủ.
+        -content grid:
+            +điện thoại: 1 cột.
+            +tablet: 2 cột.
+            +pc: 2 cột+sidebar.
+        -trên điện thoại ẩn đi các bộ lọc, sidebar.
+        -font:
+            +điện thoại: nhỏ.
+            +tablet: trung bình.
+            +pc: lớn.
+        
